@@ -23,14 +23,15 @@ h4{
     text-transform: uppercase;
     writing-mode: vertical-rl;
     margin-right: 100px;
-    /* margin-top: 100px; */
-
 }
+th{
+        display: inline-block;
+    }
+
 hr{
-    /* writing-mode: vertical-lr; */
-    /* width: 100px; */
-    height: 100px;
+    height: 100%;
     width: 1px;
     margin-left: 10px;
+    /* display: inline-block; */
 
 }
