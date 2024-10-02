@@ -24,14 +24,63 @@ h4{
     writing-mode: vertical-rl;
     margin-right: 100px;
 }
-th{
-        display: inline-block;
-    }
 
-hr{
-    height: 100%;
-    width: 1px;
-    margin-left: 10px;
-    /* display: inline-block; */
 
+.line-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.line-container::before {
+      writing-mode: vertical-rl;
+    content: "Education";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px; /* Width of the line */
+    height: 100%; /* Make it fill the height of the container */
+    background-color: black; /*Line color*/
+  }
+  
+  Rotate text to make it vertical
+  .vertical-text {
+    position: relative;
+    background-color: white; /* Background to hide the line behind the text */
+    padding: 0 5px; /* Padding around the text */
+    z-index: 2; /* Ensure the text is above the line */
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  /* Container for the vertical line */
+.line-with-text {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Create the vertical line */
+  .line-with-text::before {
+    content: "";
+    position: absolute;
+    width: 2px; /* Width of the vertical line */
+    height: 100%;
+    background-color: black; /* Line color */
+    left: 50%;
+    top: 0;
+    z-index: 1;
+  }
+  
+  /* Style for the vertical heading text */
+  .vertical-heading {
+    position: relative;
+    background-color: white; /* Background to hide the line behind the text */
+    padding: 0 5px; /* Padding around the text */
+    z-index: 2; /* Ensure the text is above the line */
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
